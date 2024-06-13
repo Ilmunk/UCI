@@ -131,8 +131,8 @@ Ustat <- function(freq, l1 = 0, l2 = 0, weight = TRUE) {
       }
 
       # weights (1/eta_q * 1/upsilon_r) based on the true dimensions
-      eta <- 1 + min(c(n,l1)) * freq_x / n
-      upsilon <- 1 + min(c(n,l2)) * freq_y / n
+      eta <- 1 + l1 * freq_x / n
+      upsilon <- 1 + l2 * freq_y / n
       W <- 1 / (eta %*% t(upsilon))
 
       A1 <- sum((freq^2 - freq) * W)

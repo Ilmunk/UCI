@@ -25,12 +25,12 @@ Returns the p-value for \code{UCI}-test and the value of the test statistic
 }
 \description{
 Given a three-way contingency table, the function \code{UCI} computes two test statistics for conditional independence
-depending on \code{weight} option. When \code{weight} is \code{TRUE}, it calculates the test statistic \eqn{T_W^\dagger}
+depending on \code{weight} option. When \code{weight} is \code{TRUE}, it calculates the test statistic \eqn{T_{W,\mathrm{plug}}}
 based on weighted U-statistics proposed by \insertCite{kim2022;textual}{UCI}.
 On the other hand, when \code{weight} is \code{FALSE}, it calculates the test statistic \eqn{T} based on
 unweighted U-statistics proposed by \insertCite{canonne2018testing;textual}{UCI}. See \insertCite{kim2022;textual}{UCI} for more details.
 Both test statistics are calibrated by the Monte Carlo permutation method, yielding valid p-values.
-Note that the computation of \eqn{T_W^\dagger} requires the knowledge of \code{l1} (the dimension of \eqn{X}) and
+Note that the computation of \eqn{T_{W,\mathrm{plug}}} requires the knowledge of \code{l1} (the dimension of \eqn{X}) and
 \code{l2} (the dimension of \eqn{Y}). When these are unknown, then the function estimates \code{l1}
 by the length of the unique elements of \eqn{X} in the dataset (and \code{l2} is similarly estimated).
 }
